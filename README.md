@@ -38,7 +38,8 @@ FAQ
 
 ### How do I start the app?
 
-Start with `npm start`. The server will look for any files you add to the `public/` directory.
+Start Server with `npm start`. The server will look for any files you add to the `public/` directory.
+Start the cleint with `npm test`
 
 ### What libraries/frameworks, packages, tools can I use?
 
