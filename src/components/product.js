@@ -93,11 +93,11 @@ class Products extends Component {
     sortby=(arrayOfObj)=>{
         if(this.state.sortbydate){
             const product = [...this.state.products];
-            return  product.sort((a,b)=> a.date > b.date)
+            return  product.sort((a,b)=>   a.date > b.date ? 1 : a.date < b.date ? -1 : 0)
         }
         else if(this.state.sortbyprice){
             const product = [...this.state.products];
-            return  product.sort((a,b)=> a.price > b.price)
+            return  product.sort((a,b)=>  a.price > b.price ? 1 : a.price < b.price ? -1 : 0)
          }
         else{
             const product = [...this.state.products];
