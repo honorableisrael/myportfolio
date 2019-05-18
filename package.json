@@ -23,18 +23,10 @@
     "react-bootstrap-sweetalert": "^4.4.1",
     "react-chartjs-2": "^2.7.5",
     "react-dom": "^16.8.3",
-    "react-html-table-to-excel": "^2.0.0",
-    "react-paginate": "^6.3.0",
-    "react-pdf": "^4.0.5",
-    "react-redux": "^6.0.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
-    "react-scripts": "^2.1.5",
-    "redux": "^4.0.1",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0"
+    "react-scripts": "^2.1.5"
   },
   "browserslist": [
     ">0.2%",
