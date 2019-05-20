@@ -1,3 +1,8 @@
+### How do I start the app?
+
+Start Server with `npm start`.
+Start cleint with `npm test`
+
 Products Grid
 ====
 
