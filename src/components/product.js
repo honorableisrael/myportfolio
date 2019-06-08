@@ -7,6 +7,7 @@ class Products extends Component {
     state = {
         products:'',
         visible: 12,
+        number:1,
         id:'',
         sortbysize:false,
         sortbyprice:false,
@@ -18,9 +19,8 @@ class Products extends Component {
      //scroll event is called 
      window.addEventListener('scroll', this.onScroll, false)
      //fetch product items
-     axios.get('http://localhost:3000/products')
+     axios.get('http://localhost:3000/products?_page=1&_limit=15')
         .then(res=>{
-            console.log(res)
             this.setState({
                 products:res.data,
                 isloading:false
@@ -40,13 +40,13 @@ class Products extends Component {
           //if scroll height is 10px to the end of page add more items
         if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 10) &&
           this.state.products.length) {
-          this.loadMore()
+          this.loadMore1()
         }
       }
       //date format func
         time_ago=(time)=> {
            var date = new Date(time);
-           var actdate = date.getDate()+'/' +`${date.getMonth()+1}`  +'/'+date.getFullYear()
+           var actdate = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`
             
          switch (typeof time) {
           case 'number':
@@ -95,6 +95,8 @@ class Products extends Component {
             return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
           }
       }
+      
+      //moneyformat
       moneyformat=(usd)=>{
           return (usd/100).toString()
       }
@@ -122,17 +124,36 @@ class Products extends Component {
         }
     }
     //loadmore func
-    loadMore=(message)=>{
-        this.setState((prev) => {
-          return {visible: prev.visible + 6};
-        });
-        //end of scroll
-        if (this.state.visible>=this.state.products.length){
-            this.setState({
-                message:' End of catalogue',
-                isloading:false
+    // loadMore=(message)=>{
+    //     this.setState((prev) => {
+    //       return {visible: prev.visible + 6};
+    //     });
+    //     //end of scroll
+    //     if (this.state.visible>=this.state.products.length){
+    //         this.setState({
+    //             message:' End of catalogue',
+    //             isloading:false
+    //         })
+    //     }
+    //   }
+      loadMore1=()=>{
+          this.setState({
+              number:(this.state.number+1)
+          })
+        console.log(this.state.number)
+        axios.get(`http://localhost:3000/products?_page=${this.state.number}&_limit=15`)
+        .then(res=>{
+            this.setState((state)=>{
+             return{
+                products:this.state.products.concat(res.data)
+             }
             })
-        }
+            console.log(this.state.products)
+        })
+        .catch(err=>{
+            console.log(err)
+            this.setState({isloading:false})
+        })
       }
 
     render() {
@@ -151,25 +172,21 @@ class Products extends Component {
                          {
                         isloading?'Loading...':''
                          }
-                            {
-                                products ?this.sortby(products).slice(0, this.state.visible).map((item)=>(
-                                <div className="product-grid__product-wrapper" key={item.id}>
-                                    <div className="product-grid__product" >
-                                        <span className="product-grid__title" style={{fontSize:item.size,height:'90px'}}>{item.face}</span>
-                                            <div className="product-grid__extend-wrapper">
-                                                <div className="product-grid__extend">
-                                                <span className="product-grid__price">{'$'+this.moneyformat(item.price)}</span>
-                                                <p className="product-grid__description">{this.time_ago(item.date)}</p>
-                                                <span className="product-grid__btn product-grid__add-to-cart">Add to cart</span>				
-                                                <span className="product-grid__btn product-grid__view"><i className="fa fa-eye"></i> View more</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                ))
-                            :
-                        ''
-                        }     
+                        { 
+                         products ?this.sortby(products).map((item)=>(
+                        <div className="" key={item.id}>
+                            <div className="first-content">
+                            <span className="product-grid__price">{'$'+this.moneyformat(item.price)}</span>
+                               <span className="center"  style={{fontSize:item.size}}>
+                                {item.face}
+                                </span>
+                            <span className="product-date">{this.time_ago(item.date)}</span>
+                            </div>
+                        </div>
+                         ))
+                         :
+                         ''
+                        }
                     </div>		
                 </div>
             </div>
