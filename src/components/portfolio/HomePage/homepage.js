@@ -15,9 +15,9 @@ import { isAbsolute } from 'path';
 
 
 const HomePage =()=>{
-
     const [title,setTitle] = useState('Guest');
     const [background,setBackground] = useState('#021d44');
+    const [contactus,setContactUs] = useState(false)
     const [color,setColor] = useState('white');
     const [state, setState] = React.useState({
         gilad: false,
@@ -27,7 +27,7 @@ const HomePage =()=>{
         background4:'#D4D4D4',
         background5:'white',
         background6:'#030106',
-        color4:'#9ea2a8'
+        color4:'#9ea2a8',
       });
       //date
       const date=()=>{
@@ -38,12 +38,13 @@ const HomePage =()=>{
         setState({ ...state, [name]: event.target.checked });
         setBackground(state.gilad?state.background1:state.background6) //background color is updated here
       };
+
       const {gilad,background1,background2,background3,background4,background5,background6,color4} = state
         return(
         <>
         <div className="navbar" style={{background,color}}>
-            <div className="nav-item"><Link to='/home' className="nav-item">About</Link></div>
-                <div className="nav-item"><Link to='/contact' className="nav-item">Contact</Link></div>
+            <div className="nav-item" onClick={()=>{setContactUs(false)}}>About</div>
+                <div className="nav-item" onClick={()=>{setContactUs(true)}}>Contact</div>
             <div className="nav-item"><Link to='/projects' className="nav-item">Projects</Link></div>
         </div>
         <div className="navbar1" style={{background,color}}>
@@ -54,18 +55,16 @@ const HomePage =()=>{
             <div className="third-wrapper"  style={{background:!gilad?background4:background2,color:color4}}>
                 <div className="container-aboutme">
                     <p className="aboutme-text" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
-                    <span className="content-header" >Software Engineer</span><br/>I’m Oba Hilary israel, a software developer based in Lagos, Nigeria.
-                        I develop web and mobile applications.
-                       I have built incredible web and mobile apps with exceptional user experience.
+                    <span className="content-header" >{!contactus? 'Software Engineer':'Contact Information'}</span><br/> 
+        {contactus?` Email:israel.hilary7@yahoo.com,vigohilsss007@gmail.com      Phone:09067151040,09058516091` : 'I’m Oba Hilary israel, a software developer based in Lagos, Nigeria.I develop web and mobile applications.I have built incredible web and mobile apps with exceptional user experience.'}
                     </p>
                 </div>
             </div>
         </div>
         <div className="container"style={{background:!gilad?background5:background2,color:!gilad?color4:background5}} >
-            <div className="content-wrapper" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
-                
+            <div className="content-wrapper" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}> 
                 <h2 className="content-header"><img src={Img1} className='image0' /></h2>
-                <p className="content-body">With over 3years experience in software developement , I have successfully built web and mobile applications, company management softwares, school management softwares including chat applications </p>
+                <p className="content-body">With over 3 years  in software developement , I have successfully built web and mobile applications, company management software, single page applications, school management softwares including chat applications </p>
             </div>
             <div className="content-wrapper" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
                 <h2  className="content-header"><img src={Img2} className='image1' /></h2>
@@ -111,17 +110,17 @@ const HomePage =()=>{
                         </p>
                         </div>
                         <div className="f1">
-                        <p><i className="fa footer-icon" style={{marginight:'13px'}}>&#xf09a;</i>Follow on facebook</p>
-                        <p><i className="fa footer-icon">&#xf16d;</i>Follow on Instagram</p>
-                        <p><i className="fa footer-icon">&#xf0e1;</i>LinkedIn profile</p>
-                        <p><i className="fa fa-github footer-icon" aria-hidden="true"></i>GitHub </p>
+                        <p><i className="fa footer-icon" style={{marginight:'13px'}}>&#xf09a;</i><a className='link' href="https://facebook.com/oba.hilary" target="blank" >Follow on facebook</a></p>
+                        <p><i className="fa footer-icon">&#xf16d;</i><a className='link' href="https://instagram.com/honorable.israel" target="blank" title='instagram profile' >Follow on Instagram</a></p>
+                        <p><i className="fa footer-icon">&#xf0e1;</i><a target='blank' className='link' href="https://www.linkedin.com/in/hilary-oba-095384118" title='linkedln profile' className="anchor-item">LinkedIn profile</a></p>
+                        <p><i className="fa fa-github footer-icon" aria-hidden="true"></i><a className='link' href="https://github.com/honorableisrael" target="blank" >GitHub </a></p>
                         </div>
                         <div className="f1">
                         <h4>CONTACT</h4>
                         <p>Send a general message</p>
                         <p>israel.hilary7@yahoo.com</p>
                         <h4>HIRE NOW</h4>
-                            <p>Enquire about hiring Israel</p>
+                            <p>Enquire about hiring Israel call 09067151040</p>
                         </div>
                    </div>
                    <div className="footer">

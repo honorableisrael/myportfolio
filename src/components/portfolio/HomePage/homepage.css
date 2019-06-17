@@ -9,7 +9,7 @@ font-style: verdana;
     padding-right:30px;
 }
 .aboutme-text{
-    font-size: 20px;
+    font-size: 15px;
     word-spacing:4px;
     line-height:1.8;
     padding: 40px;
@@ -45,7 +45,10 @@ font-style: verdana;
     font-size:19px;
     font-weight: 500;
     color: #f50057;
-    text-decoration: underline;
+    text-decoration: none;
+}
+.nav-item:hover{
+    cursor: pointer;
 }
 .container{
     margin: 0rem auto;
@@ -76,6 +79,10 @@ font-style: verdana;
         flex-basis: 60%;
         margin-bottom: 15px;
     }
+    .aboutme-text{
+        font-size: 100%;
+    }
+
     .container-aboutme{
         flex-basis: 60%;
         margin-bottom: 15px;
@@ -93,6 +100,9 @@ font-style: verdana;
     .footer{
         display:flex; 
         justify-content: center;  
+       }
+       .footer{
+
        }
        .f1{
         padding:1rem 4rem;
@@ -130,7 +140,6 @@ font-style: verdana;
     flex-flow: column;
     margin: 0px 1px;
     height: 250px;
-    box-shadow: 1px 1px 1px 1px #767677;
 }
 .content-wrapper:hover{
     flex-basis: 31.8%;
@@ -150,7 +159,7 @@ font-style: verdana;
 
 .third-wrapper{
     flex-basis:100%;
-    height: 400px;
+    height: 250px;
     display: flex;
     justify-content: center;
 }
@@ -192,6 +201,7 @@ font-style: verdana;
     border-radius: 9px;
     border:0px;
 }
+
 .project-btn:hover{
     transition: ease-in-out 3s;
     background:#e46893;
@@ -206,22 +216,29 @@ font-style: verdana;
     border-radius: 50%;
     height: 105px;
 }
-.anchor-item{
+.link{
+    color: white;
+    text-decoration: none;
+}
+    .anchor-item{
     color:white;
     text-decoration: none;
     }
 
     .f1{
-        
-        padding:.5rem 1rem;
-        font-size: .9375rem;
-        vertical-align: baseline;
-        width: fit-content;
-        height: fit-content ;
+    padding:.5rem 1rem;
+    font-size: .9375rem;
+    vertical-align: baseline;
+    width: fit-content;
+    height: fit-content ;
     }
     .footer-icon{
         font-size: 24px;
-        margin-right:7px; 
+        margin-right:7px;
+    }
+    .footer-icon:hover{
+    transition: ease-in-out 3s;
+    color:#e46893;
     }
     .FOOTER-HEADING{
         margin-top: 15px;
