@@ -3,7 +3,7 @@
   "private": true,
   "engines": {
     "node":"10.14.1",
-    "npm":"6.7.1"
+    "npm":"6.4.1"
   },
   "version": "0.0.1",
   "description": "Build a grid of product items and ads",
