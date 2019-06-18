@@ -12,7 +12,7 @@ font-style: verdana;
     font-size: 15px;
     word-spacing:4px;
     line-height:1.8;
-    padding: 40px;
+    padding: 20px 20px;
     text-align: justify;
     vertical-align:baseline;
     font-weight: 100;
@@ -190,7 +190,11 @@ font-style: verdana;
         height: fit-content ;
         text-align: center;
     }
-    
+    @media(max-width:1000px){
+    .aboutme-text{
+      margin-bottom: 10px;
+    }
+}
 @media(min-width:900px){
     .container-aboutme{
         flex-basis: 60%;

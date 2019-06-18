@@ -64,7 +64,7 @@ const HomePage =()=>{
         <div className="container"style={{background:!gilad?background4:background2,color:!gilad?color4:background5}} >
             <div className="content-wrapper" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}> 
                 <h2 className="content-header"><img src={Img1} className='image0' /></h2>
-                <p className="content-body">With over two years  in software developement ,i have successfully developed web and mobile applications, company management software, single page applications including chat applications </p>
+                <p className="content-body">With over two years  in software developement ,i have successfully developed web and mobile applications, company management software,SPA including chat applications </p>
             </div>
             <div className="content-wrapper" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
                 <h2  className="content-header"><img src={Img2} className='image1' /></h2>
@@ -81,7 +81,7 @@ const HomePage =()=>{
             <div className="duo-wrapper"    style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
                 <p className="content-body"><b>Finance Management System</b></p>
                 <p className="content-body"><i>WEB APP</i></p>
-                <p className="content-body">Vetiva is a Pan-African Financial Services Company incorporated in Nigeria; duly regulated and registered by the Securities & Exchange Commission. Our wholly-owned subsidiaries Vetiva Securities Limited (a dealing member of the Nigerian Stock Exchange); Vetiva Fund Managers Limited and Vetiva Trustees Limited act as Broker/Dealers, Fund/Portfolio Managers and Corporate Trustees respectively.</p>
+                <p className="content-body">Vetiva is a Pan-African Financial Services Company incorporated in Nigeria;The App is used in managing company shares for Vetiva, MTN and dealing members of the Nigerian Stock Exchange);through this platform stakeholders can buy and sell shares.</p>
                 <p className="content-body"> <button className="project-btn"><a target='blank' href="https://www.vtlschemesportal.com" title='vts portal' className="anchor-item">View Project</a></button></p>
             </div>
             <div className="duo-wrapper1" style={{background:background5,color:color4}}>
