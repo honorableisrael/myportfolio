@@ -33,7 +33,7 @@ font-style: verdana;
 }
 .nav-item{
     margin-left: 1rem;
-    font-size:90%;
+    font-size:19px;
     font-weight: 500;
     color:white;
     text-decoration: none;
@@ -42,7 +42,6 @@ font-style: verdana;
 }
 .nav-item:hover{
     margin-left: 1rem;
-    font-size:19px;
     font-weight: 500;
     color: #f50057;
     text-decoration: none;
@@ -57,72 +56,12 @@ font-style: verdana;
     padding-inline-end: 1.2rem;
     padding-inline-start: 1.2rem;
 }
-@media(min-width:600px){
-    .container{
-        display: flex;
-        justify-content: space-between;
-    } 
-    .container2{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .container1{
-        display: flex;
-        margin-top: .1rem;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-}
-@media(min-width:900px){
-    .container-aboutme{
-        flex-basis: 60%;
-        margin-bottom: 15px;
-    }
-    .aboutme-text{
-        font-size: 100%;
-    }
 
-    .container-aboutme{
-        flex-basis: 60%;
-        margin-bottom: 15px;
-    }
-    .nav-item{
-        font-size:  19px;
-    }
-    .content-body{
-     font-size:17px;
-    }
-    .content-header{
-        font-size:20px;
-        display: block;
-    }
-    .footer{
-        display:flex; 
-        justify-content: center;  
-       }
-       .footer{
-
-       }
-       .f1{
-        padding:1rem 4rem;
-        flex-basis: 30%;
-        font-size: .9375rem;
-        vertical-align: baseline;
-        width: fit-content;
-        height: fit-content ;
-    }
-}
-/* @media(max-width:900px){
-        .imageClass{
-            
-  object-fit: contain;
-            }        
-    } */
 .duo-wrapper{
     flex:0.93;
     height: 19rem;
     padding: 10px 0px;
+    flex-basis: 36%;
 }
 .duo-wrapper1{
     flex-basis: 61.2%;
@@ -188,7 +127,7 @@ font-style: verdana;
 .content-body{
     padding: 0px 20px;
     color: #9ea2a8;
-    font-size:99%;
+    font-size:14px;
     line-height:1.8;
     text-align: justify;
     margin: 0px 0px;
@@ -227,13 +166,12 @@ font-style: verdana;
 
     .f1{
     padding:.5rem 1rem;
-    font-size: .9375rem;
     vertical-align: baseline;
     width: fit-content;
     height: fit-content ;
     }
     .footer-icon{
-        font-size: 24px;
+        font-size: 20px;
         margin-right:7px;
     }
     .footer-icon:hover{
@@ -246,9 +184,57 @@ font-style: verdana;
     .f2{
         padding:1rem 4rem;
         flex-basis: 30%;
-        font-size: .9375rem;
+        font-size: 1.19vw;
         vertical-align: baseline;
         width: fit-content;
         height: fit-content ;
         text-align: center;
     }
+    
+@media(min-width:900px){
+    .container-aboutme{
+        flex-basis: 60%;
+        margin-bottom: 15px;
+        max-height: 210px;
+    }
+    .f2{
+    }
+    .aboutme-text{
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    } 
+    
+    .container-aboutme{
+        flex-basis: 60%;
+        margin-bottom: 15px;
+    }
+    .nav-item{
+    }
+  
+    .content-header{
+        font-size:20px;
+        display: block;
+    }
+    .footer{
+        display:flex; 
+        justify-content: center;
+        
+       }
+       
+       .f1{
+        padding:1rem 4rem;
+        flex-basis: 30%;
+        font-size: 15px;
+        vertical-align: baseline;
+        width: fit-content;
+        height: fit-content ;
+    }
+}
+@media(min-width:900px){
+    .container2{
+        display: flex;
+    }
+}

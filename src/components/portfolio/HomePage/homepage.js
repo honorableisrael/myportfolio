@@ -6,8 +6,8 @@ import Img1 from '../../../asset/images.png'
 import Img2 from '../../../asset/images.jpg';
 import Img3 from '../../../asset/image.jpg';
 import Switch from '@material-ui/core/Switch';
-//toltip
-import Tooltip from '@material-ui/core/Tooltip';
+
+import Typography from '@material-ui/core/Typography';
 import { isAbsolute } from 'path';
 
 
@@ -56,26 +56,27 @@ const HomePage =()=>{
                 <div className="container-aboutme">
                     <p className="aboutme-text" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
                     <span className="content-header" >{!contactus? 'Software Engineer':'Contact Information'}</span><br/> 
-        {contactus?` Email:israel.hilary7@yahoo.com,vigohilsss007@gmail.com      Phone:09067151040,09058516091` : 'I’m Oba Hilary israel, a software developer based in Lagos, Nigeria.I develop web and mobile applications.I have built incredible web and mobile apps with exceptional user experience.'}
+        {contactus?` Email:israel.hilary7@yahoo.com,vigohilsss007@gmail.com      Phone:09067151040,09058516091` : 'I’m Oba Hilary israel, a software developer based in Lagos, Nigeria. I develop web and mobile applications. I work well with a team as well as independently ,I have built incredible web and mobile apps with exceptional user experience.'}
                     </p>
                 </div>
             </div>
         </div>
-        <div className="container"style={{background:!gilad?background5:background2,color:!gilad?color4:background5}} >
+        <div className="container"style={{background:!gilad?background4:background2,color:!gilad?color4:background5}} >
             <div className="content-wrapper" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}> 
                 <h2 className="content-header"><img src={Img1} className='image0' /></h2>
-                <p className="content-body">With over 3 years  in software developement , I have successfully built web and mobile applications, company management software, single page applications, school management softwares including chat applications </p>
+                <p className="content-body">With over two years  in software developement ,i have successfully developed web and mobile applications, company management software, single page applications including chat applications </p>
             </div>
             <div className="content-wrapper" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
                 <h2  className="content-header"><img src={Img2} className='image1' /></h2>
-                <p className="content-body"> Html , Css , Javascript , React js , Bootstrap , Material-ui , React native, Node js, Mongo db</p>
+                <p className="content-body">My Developement tools are Html , CSS , Javascript , React js , Bootstrap , Material-ui , React native, Node js, Mongo db</p>
             </div>
             <div className="content-wrapper" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
                 <h2  className="content-header"><img src={Img3} className='image0' /></h2>
-                <p className="content-body">I’m always up for new challenges. Let’s discuss your next project and create something awesome together.</p>
+                <p className="content-body">I’m always up for new challenges.Take a look at some of my works.Let’s discuss your next project and create something awesome together.</p>
             </div>
         </div>
         {/* projects */}
+        
         <div className="container2" style={{background:!gilad?background4:background2}}>
             <div className="duo-wrapper"    style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
                 <p className="content-body"><b>Finance Management System</b></p>
@@ -110,17 +111,16 @@ const HomePage =()=>{
                         </p>
                         </div>
                         <div className="f1">
-                        <p><i className="fa footer-icon" style={{marginight:'13px'}}>&#xf09a;</i><a className='link' href="https://facebook.com/oba.hilary" target="blank" >Follow on facebook</a></p>
+                        <p><i className="fa footer-icon" >&#xf09a;</i><a className='link' href="https://facebook.com/oba.hilary" target="blank" >Follow on facebook</a></p>
                         <p><i className="fa footer-icon">&#xf16d;</i><a className='link' href="https://instagram.com/honorable.israel" target="blank" title='instagram profile' >Follow on Instagram</a></p>
                         <p><i className="fa footer-icon">&#xf0e1;</i><a target='blank' className='link' href="https://www.linkedin.com/in/hilary-oba-095384118" title='linkedln profile' className="anchor-item">LinkedIn profile</a></p>
                         <p><i className="fa fa-github footer-icon" aria-hidden="true"></i><a className='link' href="https://github.com/honorableisrael" target="blank" >GitHub </a></p>
                         </div>
                         <div className="f1">
-                        <h4>CONTACT</h4>
-                        <p>Send a general message</p>
-                        <p>israel.hilary7@yahoo.com</p>
-                        <h4>HIRE NOW</h4>
-                            <p>Enquire about hiring Israel call 09067151040</p>
+                        <h6 className="content-body">CONTACT</h6>
+                        <p className="content-body">Send a general message</p>
+                        <p className="content-body">israel.hilary7@yahoo.com</p>
+                            <p className="content-body">Hire now call 09067151040</p>
                         </div>
                    </div>
                    <div className="footer">
