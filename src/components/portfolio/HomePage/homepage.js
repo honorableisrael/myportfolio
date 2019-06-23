@@ -17,9 +17,9 @@ import { isAbsolute } from 'path';
 const HomePage =()=>{
     const [title,setTitle] = useState('Guest');
     const [background,setBackground] = useState('#021d44');
-    const [contactus,setContactUs] = useState(false)
-    const [color,setColor] = useState('white');
-    const [state, setState] = React.useState({
+        const [contactus,setContactUs] = useState(false)
+        const [color,setColor] = useState('white');
+        const [state, setState] = React.useState({
         gilad: false,
         background1:'#021d44',
         background2:'#303030',
@@ -27,7 +27,7 @@ const HomePage =()=>{
         background4:'#D4D4D4',
         background5:'white',
         background6:'#030106',
-        color4:'#9ea2a8',
+        color4:'rgb(4,4,4)',
       });
       //date
       const date=()=>{
@@ -56,7 +56,7 @@ const HomePage =()=>{
                 <div className="container-aboutme">
                     <p className="aboutme-text" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
                     <span className="content-header" >{!contactus? 'Software Engineer':'Contact Information'}</span><br/> 
-        {contactus?` Email:israel.hilary7@yahoo.com,vigohilsss007@gmail.com      Phone:09067151040,09058516091` : 'I’m Oba Hilary israel, a software developer based in Lagos, Nigeria. I develop web and mobile applications. I work well with a team as well as independently ,I have built incredible web and mobile apps with exceptional user experience.'}
+        {contactus?` Email:israel.hilary7@yahoo.com,vigohilsss007@gmail.com      Phone:09067151040,09058516091` : 'I’m Oba Hilary Israel, a software developer based in Lagos, Nigeria. I develop web and mobile applications. I work well with a team as well as independently ,I have built incredible web and mobile apps with exceptional user experience.'}
                     </p>
                 </div>
             </div>
@@ -79,10 +79,10 @@ const HomePage =()=>{
         
         <div className="container2" style={{background:!gilad?background4:background2}}>
             <div className="duo-wrapper"    style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
-                <p className="content-body"><b>Finance Management System</b></p>
-                <p className="content-body"><i>WEB APP</i></p>
-                <p className="content-body">Vetiva is a Pan-African Financial Services Company incorporated in Nigeria;The App is used in managing company shares for Vetiva, MTN and dealing members of the Nigerian Stock Exchange);through this platform stakeholders can buy and sell shares.</p>
-                <p className="content-body"> <button className="project-btn"><a target='blank' href="https://www.vtlschemesportal.com" title='vts portal' className="anchor-item">View Project</a></button></p>
+            <p className="content-body"><b>Finance Management System</b></p>
+            <p className="content-body"><i>WEB APP</i></p>
+            <p className="content-body">Vetiva is a Pan-African Financial Services Company incorporated in Nigeria;The App is used in managing company shares for Vetiva, MTN and dealing members of the Nigerian Stock Exchange);through this platform stakeholders can buy and sell shares.</p>
+            <p className="content-body"> <button className="project-btn"><a target='blank' href="https://www.vtlschemesportal.com" title='vts portal' className="anchor-item">View Project</a></button></p>
             </div>
             <div className="duo-wrapper1" style={{background:background5,color:color4}}>
             <p><img src={require('../../../asset/vetiva.gif')} className="imageClass" alt="gif company demo" /></p>
