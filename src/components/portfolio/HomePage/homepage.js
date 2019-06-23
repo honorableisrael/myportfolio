@@ -100,6 +100,18 @@ const HomePage =()=>{
             <p><img src={require('../../../asset/smartfuel.jpeg')} className="imageClass" alt="gif company demo" /></p>
             </div>
         </div>
+        {/* project3 */}
+        <div className="container2" style={{background:!gilad?background4:background2}}>
+            <div className="duo-wrapper"    style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
+                <p className="content-body"><b>School Management</b></p>
+                  <p className="content-body"><i>WEB APP</i></p><p className="content-body">Landing page for prep class.</p>
+                <p className="content-body"> <button className="project-btn"><a target='blank' href="https://schoolfolder.herokuapp.com" title="smart fuel" className="anchor-item">View Project</a></button></p>
+            </div>
+            <div className="duo-wrapper1" style={{background:background5,color:color4}}>
+            <p><img src={require('../../../asset/thirdproject.png')} className="imageClass" alt="gif company demo" /></p>
+            </div>
+        </div>
+       
         <div className="container3">
             <div className="fourth-wrapper" style={{background:background,color}}>
                    <div className="footer">
