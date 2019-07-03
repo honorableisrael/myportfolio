@@ -56,7 +56,10 @@ font-style: verdana;
     padding-inline-end: 1.2rem;
     padding-inline-start: 1.2rem;
 }
-
+.container-aboutme{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
 .duo-wrapper{
     flex:0.93;
     height: 19rem;
@@ -213,8 +216,6 @@ font-style: verdana;
     .container-aboutme{
         flex-basis: 60%;
         margin-bottom: 15px;
-    }
-    .nav-item{
     }
   
     .content-header{
