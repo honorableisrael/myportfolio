@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import './homepage.css'
-import vetivauser from '../../../asset/vetivauser.mp4'
 import Img1 from '../../../asset/images.png'
 import Img2 from '../../../asset/images.jpg';
 import Img3 from '../../../asset/image.jpg';
@@ -56,7 +55,7 @@ const HomePage =()=>{
                 <div className="container-aboutme">
                     <p className="aboutme-text" style={{background:!gilad?background5:background6,color:!gilad?color4:background5}}>
                     <span className="content-header" >{!contactus? 'Software Engineer':'Contact Information'}</span><br/> 
-        {contactus?` Email:israel.hilary7@yahoo.com,vigohilsss007@gmail.com      Phone:09067151040,09058516091` : 'I’m Oba Hilary Israel, a software developer based in Lagos, Nigeria. I develop web and mobile applications. I work well with a team as well as independently ,I have built incredible web and mobile apps with exceptional user experience.'}
+        {contactus?` Email:israel.hilary7@yahoo.com,honorablehilary@gmail.com      Phone:09067151040,09058516091` : 'I’m Oba Hilary Israel, a software developer based in Lagos, Nigeria. I develop web and mobile applications. I work well with a team as well as independently ,I have built incredible web and mobile apps with exceptional user experience.'}
                     </p>
                 </div>
             </div>

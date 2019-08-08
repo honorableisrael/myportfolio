@@ -1,6 +1,3 @@
-body{
-font-style: verdana;
-}
 .navbar{
     color:white;
     display: flex;
@@ -195,6 +192,16 @@ font-style: verdana;
     @media(max-width:1000px){
     .aboutme-text{
       margin-bottom: 10px;
+    }
+}
+@media(max-width:500px){
+    .content-wrapper{
+        position: relative;
+        top:3rem;
+    }
+    .duo-wrapper{
+        position: relative;
+        top:3rem;
     }
 }
 @media(min-width:900px){

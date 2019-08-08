@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import Products from './components/product'
-import HomePage from './components/portfolio/HomePage/homepage'
+import Products from './components/product';
+import HomePage from './components/portfolio/HomePage/homepage';
+import './index.css';
 
 
 ReactDOM.render(
